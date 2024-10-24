@@ -74,8 +74,8 @@ function Login() {
 const styles = {
   loginContainer: {
     backgroundColor: "#fff",
-    padding: "40px",
-    borderRadius: "10px",
+    padding: "300px",
+    borderRadius: "30px",
     boxShadow: "0px 0px 15px rgba(0, 0, 0, 0.1)",
     maxWidth: "400px",
     margin: "auto",

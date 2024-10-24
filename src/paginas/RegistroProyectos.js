@@ -48,10 +48,10 @@ function RegistroProyectos() {
   };
 
   return (
-    <div>
+    <div style={styles.container}>
+      <form style={styles.form} onSubmit={handleSubmit}>
       <h2>Registrar Proyecto</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
+        <div style={styles.formGroup}>
           <label>Nombre del proyecto:</label>
           <input
             type="text"
@@ -60,7 +60,7 @@ function RegistroProyectos() {
             required
           />
         </div>
-        <div>
+        <div style={styles.formGroup}>
           <label>Analista:</label>
           <input
             type="number"
@@ -69,7 +69,7 @@ function RegistroProyectos() {
             required
           />
         </div>
-        <div>
+        <div style={styles.formGroup}>
           <label>Presupuesto:</label>
           <input
             type="number"
@@ -78,7 +78,7 @@ function RegistroProyectos() {
             required
           />
         </div>
-        <div>
+        <div style={styles.formGroup}>
           <label>Fecha de inicio:</label>
           <input
             type="date"
@@ -87,7 +87,7 @@ function RegistroProyectos() {
             required
           />
         </div>
-        <div>
+        <div style={styles.formGroup}>
           <label>Fecha de fin:</label>
           <input
             type="date"
@@ -96,7 +96,7 @@ function RegistroProyectos() {
             required
           />
         </div>
-        <div>
+        <div style={styles.formGroup}>
           <label>Estatus:</label>
           <input
             type="text"
@@ -105,13 +105,45 @@ function RegistroProyectos() {
             required
           />
         </div>
-        <button type="submit">Registrar Proyecto</button>
+        <button type="submit" style={styles.button}>Registrar Proyecto</button>
+        {mensaje && <p>{mensaje}</p>}
       </form>
 
-      {mensaje && <p>{mensaje}</p>}
+      
     </div>
   );
 }
+
+//css styles
+const styles = {
+  container: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '100vh',
+    backgroundColor: '#f4f4f4',
+  },
+  form: {
+    backgroundColor: 'white',
+    padding: '20px',
+    borderRadius: '10px',
+    boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
+    maxWidth: '400px',
+    width: '100%',
+  },
+  formGroup: {
+    marginBottom: '15px',
+  },
+  button: {
+    width: '100%',
+    padding: '10px',
+    backgroundColor: '#4CAF50',
+    color: 'white',
+    border: 'none',
+    borderRadius: '5px',
+    cursor: 'pointer',
+  },
+};
 
 export {RegistroProyectos};
 
