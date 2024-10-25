@@ -229,15 +229,39 @@ console.error('Error durante la prueba de usabilidad:', error);
 
 // Función para ejecutar prueba de carga
 async function ejecutarPruebaCarga() {
-  const driver = new selenium.Builder().forBrowser('chrome').build();
+  //const driver = new selenium.Builder().forBrowser('chrome').build();
+  let driver = await new Builder().forBrowser('chrome').build();
   try {
     await driver.get('https://www.tigo.com.gt');
-    // Aquí puedes escribir el código para la prueba de carga
-    return 'Prueba de carga completada';
+    console.log('Página cargada correctamente');
+  }catch (error) {
+    console.error('Error durante la prueba de carga:', error);
   } finally {
     await driver.quit();
+    async function ejecutarSecuenciaDePruebas() {
+      const retrasoSegundos = 3; // Retraso de 3 segundos entre cada prueba
+    
+      // Ejecutar cada prueba con un retraso
+      await ejecutarPruebaCarga();
+      await new Promise(resolve => setTimeout(resolve, retrasoSegundos * 10000));
+    
+      await ejecutarPruebaCarga();
+      await new Promise(resolve => setTimeout(resolve, retrasoSegundos * 10000));
+    
+      await ejecutarPruebaCarga();
+      await new Promise(resolve => setTimeout(resolve, retrasoSegundos * 10000));
+    
+      await ejecutarPruebaCarga();
+      await new Promise(resolve => setTimeout(resolve, retrasoSegundos * 10000));
+    
+      await ejecutarPruebaCarga();
+    }
   }
+ 
+  ejecutarSecuenciaDePruebas(2);
 }
+
+
 /////////////////////////////////////////////////
 ///////Funcion para agregar datos a la tabla ambiente de pruebas//////
 // Ruta para obtener todos los proyectos

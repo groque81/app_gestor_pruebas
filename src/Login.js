@@ -13,7 +13,7 @@ function Login() {
     console.log("Datos enviados:", { Nombre, Clave });  // Verifica lo que estás enviando
 
     try {
-      const response = await fetch("https://black-beach-028a6081e.5.azurestaticapps.net/login", {
+      const response = await fetch("https://gestorbackend-dvdjczcaf5h5c5ax.westus-01.azurewebsites.net/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
