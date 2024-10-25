@@ -12,7 +12,7 @@ function ModuloPruebas() {
   // Función para obtener todos los proyectos
   const obtenerProyectos = async () => {
     try {
-      const response = await fetch('http://localhost:5000/moduloPruebas');
+      const response = await fetch('http://gestorbackend-dvdjczcaf5h5c5ax.westus-01.azurewebsites.net/moduloPruebas');
       const data = await response.json();
       setProyectos(data);
     } catch (error) {
@@ -25,7 +25,7 @@ function ModuloPruebas() {
     if (e.key === 'Enter') {
       try {
         const response = await fetch(
-          `http://localhost:5000/moduloPruebas/${nombreProyecto}`
+          `http://gestorbackend-dvdjczcaf5h5c5ax.westus-01.azurewebsites.net/moduloPruebas/${nombreProyecto}`
         );
         const data = await response.json();
         setProyectos(data);
@@ -37,7 +37,7 @@ function ModuloPruebas() {
 
   const obtenerPaquetePruebas = async () => {
     try {
-      const response = await fetch('http://localhost:5000/paquetePruebas');
+      const response = await fetch('http://gestorbackend-dvdjczcaf5h5c5ax.westus-01.azurewebsites.net/paquetePruebas');
       const data = await response.json();
       console.log('Datos recibidos:', data); // Agregar esto para verificar
       setPaquetePruebas(data);
@@ -55,7 +55,7 @@ function ModuloPruebas() {
   // Obtener proyectos desde el backend
   const obtenerProyectos_1 = async () => {
     try {
-      const response = await fetch('http://localhost:5000/moduloPruebas');
+      const response = await fetch('http://gestorbackend-dvdjczcaf5h5c5ax.westus-01.azurewebsites.net/moduloPruebas');
       const data = await response.json();
       setProyectos(data);
     } catch (error) {
@@ -79,7 +79,7 @@ const agregarAmbientePruebas = async (e) => {
   }
 
   try {
-    const response = await fetch('http://localhost:5000/ambientePruebas_1', {
+    const response = await fetch('http://gestorbackend-dvdjczcaf5h5c5ax.westus-01.azurewebsites.net/ambientePruebas_1', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -113,7 +113,7 @@ const agregarAmbientePruebas = async (e) => {
   // Funciones para ejecutar las pruebas de funcionalidad, usabilidad y carga
   const ejecutarPrueba = async (tipoPrueba) => {
     try {
-      const response = await fetch(`http://localhost:5000/moduloPruebas`, {
+      const response = await fetch(`http://gestorbackend-dvdjczcaf5h5c5ax.westus-01.azurewebsites.net/moduloPruebas`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
