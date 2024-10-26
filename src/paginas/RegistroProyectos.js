@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function RegistroProyectos() {
   const [nombreProyecto, setNombre] = useState('');
@@ -8,6 +9,11 @@ function RegistroProyectos() {
   const [fechaCierreProyecto, setFechaCierre] = useState('');
   const [estatus, setEstatus] = useState('');
   const [mensaje, setMensaje] = useState('');
+  const navigate=useNavigate();
+
+  const handleDashboardClick = () => {
+    navigate('/dashboard');
+  };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -106,7 +112,9 @@ function RegistroProyectos() {
           />
         </div>
         <button type="submit" style={styles.button}>Registrar Proyecto</button>
+        <button onClick={handleDashboardClick}>Ir a Dashboard</button>
         {mensaje && <p>{mensaje}</p>}
+        
       </form>
 
       
