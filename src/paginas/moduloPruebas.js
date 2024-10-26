@@ -225,7 +225,7 @@ const agregarAmbientePruebas = async (e) => {
             <button
               style={{ padding: '10px', margin: '10px', backgroundColor: '#4CAF50', color: 'white', border: 'none' }}
             >
-              <Link to="/dashboard">Ir a Dashboard</Link>
+              <Link to="https://black-beach-028a6081e.5.azurestaticapps.net/moduloPruebas">Ir a Dashboard</Link>
             </button>
             </div>
         </div>
