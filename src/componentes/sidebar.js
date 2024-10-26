@@ -15,7 +15,7 @@ function Sidebar() {
           <Link to="/moduloPruebas">Modulo de Pruebas</Link>
         </li>
         <li>
-        <Link to="/login">Salir</Link>
+        <Link to="https://black-beach-028a6081e.5.azurestaticapps.net">Salir</Link>
         </li>
       </ul>
     </div>
