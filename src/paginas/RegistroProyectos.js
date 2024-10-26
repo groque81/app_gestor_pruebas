@@ -113,10 +113,8 @@ function RegistroProyectos() {
         </div>
         <button type="submit" style={styles.button}>Registrar Proyecto</button>
         {mensaje && <p>{mensaje}</p>}
-        <button onClick={handleDashboardClick}>Ir a Dashboard</button>
       </form>
-
-      
+      <button onClick={handleDashboardClick}>Ir a Dashboard</button>
     </div>
   );
 }
