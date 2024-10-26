@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function ModuloPruebas() {
   const [proyectos, setProyectos] = useState([]);
@@ -8,7 +8,11 @@ function ModuloPruebas() {
   //Funcion para registrar datos del la prueba de proyectos
   const [proyectoSeleccionado, setProyectoSeleccionado] = useState(null); // Para almacenar el proyecto seleccionado
   const [mostrarLista, setMostrarLista] = useState(false); // Para controlar si se muestra la lista o no
- 
+  const navigate=useNavigate();
+
+  const handleDashboardClick = () => {
+    navigate('/dashboard');
+  };
 
   // Función para obtener todos los proyectos
   const obtenerProyectos = async () => {
@@ -223,9 +227,10 @@ const agregarAmbientePruebas = async (e) => {
               Prueba de Carga
             </button>
             <button
+              onClick={handleDashboardClick}
               style={{ padding: '10px', margin: '10px', backgroundColor: '#4CAF50', color: 'white', border: 'none' }}
             >
-              <Link to="https://black-beach-028a6081e.5.azurestaticapps.net/dashboard">Ir a Dashboard</Link>
+            Ir a Dashboard
             </button>
             </div>
         </div>
