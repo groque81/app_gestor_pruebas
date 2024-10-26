@@ -22,7 +22,7 @@ function RegistroProyectos() {
     };
 
     try {
-      const response = await fetch('http://localhost:5000/proyectos', {
+      const response = await fetch('https://gestorbackend-dvdjczcaf5h5c5ax.westus-01.azurewebsites.net/proyectos', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
