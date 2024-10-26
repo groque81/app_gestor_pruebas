@@ -112,7 +112,9 @@ function RegistroProyectos() {
           />
         </div>
         <button type="submit" style={styles.button}>Registrar Proyecto</button>
+        <nav>
         <button onClick={handleDashboardClick}>Ir a Dashboard</button>
+        </nav>        
         {mensaje && <p>{mensaje}</p>}
       </form>
     </div>
