@@ -14,7 +14,9 @@ function Sidebar() {
         <li>
           <Link to="/moduloPruebas">Modulo de Pruebas</Link>
         </li>
-        <li>Configuraciones</li>
+        <li>
+        <Link to="/login">Modulo de Pruebas</Link>
+        </li>
       </ul>
     </div>
   );

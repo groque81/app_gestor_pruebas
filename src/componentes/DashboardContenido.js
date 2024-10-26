@@ -4,12 +4,12 @@ import {Widget} from './widget';
 function DashboardContent() {
   return (
     <div style={styles.content}>
-      <h2>Bienvenido al Dashboard</h2>
+      <h2>Gestor de Pruebas.</h2>
       <div style={styles.widgets}>
-        <Widget title="Usuarios Activos" count={150} />
-        <Widget title="Ventas del Mes" count={3000} />
-        <Widget title="Nuevos Clientes" count={25} />
-        <Widget title="Reportes" count={12} />
+        <Widget title="Proyectos Activos" count={3} />
+        <Widget title="Pruebas Fallidas" count={10} />
+        <Widget title="Metricas" count={'10% Pruebas ejecutadas'} />
+        <Widget title="Reportes" count={0} />
       </div>
     </div>
   );

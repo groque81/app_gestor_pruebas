@@ -1,6 +1,7 @@
 import React from 'react';
 
 function Navbar() {
+  
   return (
     <nav style={styles.navbar}>
       <h1 style={styles.title}>Mi Dashboard</h1>

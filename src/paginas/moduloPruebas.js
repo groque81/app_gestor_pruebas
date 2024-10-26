@@ -136,7 +136,7 @@ const agregarAmbientePruebas = async (e) => {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
       {/* Parte superior: campo de búsqueda y tabla */}
-      <div style={{ flex: '0 0 50%', padding: '20px', backgroundColor: '#f5f5f5' }}>
+      <div style={{ flex: '0 0 50%', padding: '20px', backgroundColor: '#f4f4f4' }}>
         <h2>Registro de Proyectos</h2>
 
         {/* Campo de búsqueda */}
@@ -181,7 +181,7 @@ const agregarAmbientePruebas = async (e) => {
       {/* Parte inferior (puedes modificar como necesites) */}
       <div style={{ flex: 1, display: 'flex' }}>
         {/* Parte inferior izquierda: tabla de paquetePruebas */}
-        <div style={{ flex: 1, padding: '20px', backgroundColor: '#2196F3', color: 'white' }}>
+        <div style={{ flex: 1, padding: '20px', backgroundColor: '#86898a', color: 'black' }}>
           <h3>Paquete de Pruebas</h3>
           <table style={{ width: '100%', borderCollapse: 'collapse', backgroundColor: '#fff', color: '#000' }}>
             <thead>
@@ -211,21 +211,21 @@ const agregarAmbientePruebas = async (e) => {
             </button>
             <button
               onClick={() => ejecutarPrueba('Usabilidad')}
-              style={{ padding: '10px', margin: '10px', backgroundColor: '#FF9800', color: 'white', border: 'none' }}
+              style={{ padding: '10px', margin: '10px', backgroundColor: '#4CAF50', color: 'white', border: 'none' }}
             >
               Prueba de Usabilidad
             </button>
             <button
               onClick={() => ejecutarPrueba('Carga')}
-              style={{ padding: '10px', margin: '10px', backgroundColor: '#2196F3', color: 'white', border: 'none' }}
+              style={{ padding: '10px', margin: '10px', backgroundColor: '#4CAF50', color: 'white', border: 'none' }}
             >
               Prueba de Carga
             </button>
             </div>
         </div>
 
-        <div style={{ flex: 1, backgroundColor: '#f44336', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          Parte Inferior Derecha
+        <div style={{ flex: 1, backgroundColor: '#86898a', color: 'black', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          {/*Parte Inferior Derecha*/}
           <div style={{ padding: '20px' }}>
       <h2>Selecciona un Proyecto</h2>
 
