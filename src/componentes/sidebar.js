@@ -15,7 +15,7 @@ function Sidebar() {
           <Link to="/moduloPruebas">Modulo de Pruebas</Link>
         </li>
         <li>
-        <Link to="/login">Modulo de Pruebas</Link>
+        <Link to="/login">Salir</Link>
         </li>
       </ul>
     </div>
