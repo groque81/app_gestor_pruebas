@@ -222,7 +222,7 @@ const agregarAmbientePruebas = async (e) => {
               Prueba de Carga
             </button>
             <button
-              onClick={(<Dashboard />) }
+              onClick={() => <Dashboard />}
               style={{ padding: '10px', margin: '10px', backgroundColor: '#4CAF50', color: 'white', border: 'none' }}
             >
               Salir
