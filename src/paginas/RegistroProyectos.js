@@ -9,11 +9,6 @@ function RegistroProyectos() {
   const [fechaCierreProyecto, setFechaCierre] = useState('');
   const [estatus, setEstatus] = useState('');
   const [mensaje, setMensaje] = useState('');
-  const navigate=useNavigate();
-
-  const handleDashboardClick = () => {
-    navigate('/dashboard');
-  };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
