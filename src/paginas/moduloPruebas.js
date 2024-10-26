@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 function ModuloPruebas() {
   const [proyectos, setProyectos] = useState([]);
@@ -222,10 +223,9 @@ const agregarAmbientePruebas = async (e) => {
               Prueba de Carga
             </button>
             <button
-              onClick={() => <Dashboard />}
               style={{ padding: '10px', margin: '10px', backgroundColor: '#4CAF50', color: 'white', border: 'none' }}
             >
-              Salir
+              <Link to="/dashboard">Ir a Dashboard</Link>
             </button>
             </div>
         </div>
